@@ -37,12 +37,11 @@
   /* Шапка */
   header.site{background:#000;color:var(--paper)}
   .site-in{display:flex;align-items:center;gap:16px;padding:16px 0}
-  .brand{text-decoration:none;font-weight:800;letter-spacing:-.01em;font-size:18px;white-space:nowrap}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;letter-spacing:-.01em;font-size:18px;white-space:nowrap}
+  .brand-logo{display:none}
   nav.main{margin-left:auto;display:flex;gap:30px}
   nav.main a{text-decoration:none;font-weight:500;font-size:15px;color:var(--dark-muted)}
   nav.main a:hover{color:var(--paper);text-decoration:underline;text-underline-offset:4px}
-  .head-mail{margin-left:30px;font-weight:700;font-size:15px;text-decoration:none;color:var(--accent-on-dark);white-space:nowrap}
-  .head-mail:hover{text-decoration:underline;text-underline-offset:4px}
 
   /* Hero */
   .hero{background:#000;color:var(--paper)}
@@ -114,9 +113,9 @@
   @media (max-width:760px){
     .wrap{padding:0 18px}
     nav.main{display:none}
-    .site-in{flex-wrap:wrap;row-gap:6px;padding:14px 0}
+    .site-in{padding:12px 0}
     .brand{font-size:17px}
-    .head-mail{margin-left:auto;font-size:14px}
+    .brand-logo{display:block;width:38px;height:38px;object-fit:cover}
     .hero-in{grid-template-columns:1fr;padding:56px 0 48px;gap:40px}
     h1{font-size:clamp(38px,11.5vw,54px)}
     .hero-logo{justify-self:start;width:min(230px,62vw)}
@@ -145,13 +144,15 @@
 
 <header class="site">
   <div class="wrap site-in">
-    <a class="brand" href="/">Zaza International</a>
+    <a class="brand" href="/">
+      <img class="brand-logo" src="logo.jpg" alt="">
+      <span>Zaza International</span>
+    </a>
     <nav class="main">
       <a href="#directions">Направления</a>
       <a href="#projects">Проекты</a>
       <a href="#contacts">Контакты</a>
     </nav>
-    <a class="head-mail" href="mailto:ceo@zazainternational.ru">ceo@zazainternational.ru</a>
   </div>
 </header>
 
@@ -241,7 +242,7 @@
       <div class="sec-head rv"><span class="idx">03</span><h2>Контакты</h2><div class="rule"></div></div>
       <h2 class="rv">Обсудить проект</h2>
       <p class="rv">Напишите нам — ответим в течение рабочего дня.</p>
-      <a class="big-mail rv" href="mailto:ceo@zazainternational.ru">ceo@zazainternational.ru</a>
+      <a class="big-mail rv" href="mailto:contact@zazainternational.ru">contact@zazainternational.ru</a>
     </div>
   </section>
 </main>
@@ -263,8 +264,7 @@
       <div>
         <h4>Наши сервисы</h4>
         <a href="https://asta.zazainternational.ru">asta.zazainternational.ru</a>
-        <a href="https://metrica.zazainternational.ru">metrica.zazainternational.ru</a>
-        <a href="mailto:ceo@zazainternational.ru">ceo@zazainternational.ru</a>
+        <a href="mailto:contact@zazainternational.ru">contact@zazainternational.ru</a>
       </div>
     </div>
     <div class="foot-bottom">
